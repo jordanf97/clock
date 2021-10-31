@@ -3,7 +3,7 @@
  * https://reactnavigation.org/docs/typescript/
  */
 
-import { RootNavigatorParamList } from "@/navigation/RootNavigator";
+import { RootNavigatorParamList } from "@/navigation/root-navigator";
 
 declare global {
   namespace ReactNavigation {

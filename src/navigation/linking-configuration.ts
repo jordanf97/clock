@@ -9,9 +9,9 @@ export const LinkingConfiguration: LinkingOptions<RootNavigatorParamList> = {
     screens: {
       SetupNavigator: {
         screens: {
-          LandingScreen: "LandingScreen",
-          QrScanModal: "QrScanModal",
-          ManualSetupModal: "ManualSetupModal",
+          LandingScreen: "/setup",
+          QrScanModal: "setup/scan-configuration",
+          ManualSetupModal: "setup/manual-configuration",
         },
       },
       NotFound: "*",

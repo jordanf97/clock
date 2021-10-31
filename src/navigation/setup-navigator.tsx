@@ -2,7 +2,7 @@ import {
   ManualSetupModal,
   QrScanModal,
   LandingScreen,
-} from "@/screens/SetupScreens";
+} from "@/screens/setup-screens";
 import { CompositeScreenProps } from "@react-navigation/core";
 
 import {
