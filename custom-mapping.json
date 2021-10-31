@@ -1,0 +1,256 @@
+{
+    "components": {
+      "Button": {
+        "meta": {
+          "parameters": {
+            "elevation": {
+              "type": "number"
+            },
+            "shadowRadius": {
+              "type": "number"
+            },
+            "shadowOpacity": {
+              "type": "number"
+            },
+            "shadowColor": {
+              "type": "string"
+            },
+            "shadowOffset": {
+              "type": {
+                "width": {
+                  "type": "number"
+                },
+                "height": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "variantGroups": {
+            "shape": {
+              "flat": {
+                "default": false
+              },
+              "bar": {
+                "default": false
+              },
+              "standard": {
+                "default": true
+              }
+            },
+            "status": {
+              "action": {
+                "default": false
+              }
+            },
+            "size": {
+              "medium": {
+                "default": false
+              },
+              "large": {
+                "default": true
+              },
+              "mega": {
+                "default": false
+              }
+            }
+          }
+        },
+  
+        "appearances": {
+          "filled": {
+            "mapping": {},
+            "variantGroups": {
+              "shape": {
+                "flat": {
+                  "shadowColor": "#000",
+                  "shadowOffset": {
+                    "width": 0,
+                    "height": 0
+                  },
+                  "shadowOpacity": 0,
+                  "shadowRadius": 0,
+  
+                  "elevation": 0
+                },
+                "standard": {
+                  "borderRadius": "border-radius",
+                  "elevation": 2,
+                  "shadowColor": "#000",
+                  "shadowOpacity": 0.2,
+                  "shadowRadius": 1.41,
+                  "shadowOffset": {
+                    "width": 0,
+                    "height": 1
+                  },
+                  "state": {
+                    "focused": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 1
+                      },
+                      "shadowOpacity": 0.18,
+                      "shadowRadius": 1.0,
+  
+                      "elevation": 1
+                    },
+                    "hover": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 1
+                      },
+                      "shadowOpacity": 0.18,
+                      "shadowRadius": 1.0,
+  
+                      "elevation": 1
+                    },
+                    "active": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 1
+                      },
+                      "shadowOpacity": 0.18,
+                      "shadowRadius": 1.0,
+  
+                      "elevation": 1
+                    },
+                    "disabled": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 0
+                      },
+                      "shadowOpacity": 0,
+                      "shadowRadius": 0,
+  
+                      "elevation": 0
+                    }
+                  }
+                },
+                "bar": {
+                  "borderRadius": 0,
+                  "elevation": 4,
+                  "shadowColor": "#000",
+                  "shadowOpacity": 0.23,
+                  "shadowRadius": 2.62,
+                  "shadowOffset": {
+                    "width": 0,
+                    "height": 2
+                  },
+  
+                  "state": {
+                    "focused": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 1
+                      },
+                      "shadowOpacity": 0.18,
+                      "shadowRadius": 1.0,
+  
+                      "elevation": 1
+                    },
+                    "hover": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 1
+                      },
+                      "shadowOpacity": 0.18,
+                      "shadowRadius": 1.0,
+  
+                      "elevation": 1
+                    },
+                    "active": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 1
+                      },
+                      "shadowOpacity": 0.18,
+                      "shadowRadius": 1.0,
+  
+                      "elevation": 1
+                    },
+                    "disabled": {
+                      "shadowColor": "#000",
+                      "shadowOffset": {
+                        "width": 0,
+                        "height": 0
+                      },
+                      "shadowOpacity": 0,
+                      "shadowRadius": 0,
+  
+                      "elevation": 0
+                    }
+                  }
+                }
+              },
+  
+              "status": {
+                "primary": {
+                  "textColor": "custom-background"
+                },
+  
+                "warning": {
+                  "textColor": "color-basic-800"
+                },
+  
+                "danger": {
+                  "textColor": "color-basic-800"
+                },
+  
+                "action": {
+                  "borderColor": "brand-action-500",
+                  "borderRadius": 0,
+                  "backgroundColor": "brand-action-500",
+                  "textColor": "text-control-color",
+                  "iconTintColor": "text-control-color",
+                  "state": {
+                    "focused": {
+                      "borderColor": "brand-action-700",
+                      "backgroundColor": "brand-action-700"
+                    },
+                    "hover": {
+                      "borderColor": "brand-action-400",
+                      "backgroundColor": "brand-action-400"
+                    },
+                    "active": {
+                      "borderColor": "brand-action-600",
+                      "backgroundColor": "brand-action-600"
+                    },
+                    "disabled": {
+                      "borderColor": "custom-disabled",
+                      "backgroundColor": "custom-disabled",
+                      "textColor": "text-disabled-color",
+                      "iconTintColor": "text-disabled-color"
+                    }
+                  }
+                }
+              },
+  
+              "size": {
+                "mega": {
+                  "minWidth": 72,
+                  "minHeight": 72,
+                  "borderRadius": "border-radius",
+                  "borderWidth": "border-width",
+                  "paddingHorizontal": 14,
+                  "paddingVertical": 24,
+                  "textMarginHorizontal": 14,
+                  "textFontSize": 18,
+                  "textFontWeight": "bold",
+                  "iconWidth": 24,
+                  "iconHeight": 24,
+                  "iconMarginHorizontal": 14
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
