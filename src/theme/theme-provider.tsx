@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
-import useColorScheme from "@/hooks/useColorScheme";
-import LightTheme from "./lightTheme";
-import DarkTheme from "./darkTheme";
+import useColorScheme from "@/hooks/use-color-scheme";
+import LightTheme from "./light-theme";
+import DarkTheme from "./dark-theme";
 import { StatusBar } from "expo-status-bar";
 
 export const ThemeMap = {
@@ -12,7 +12,7 @@ export const ThemeMap = {
 };
 
 import * as eva from "@eva-design/eva";
-import materialIconsPack from "./materialIconsPack";
+import materialIconsPack from "./material-icons-pack";
 
 export const ThemeProvider: React.FC = ({ children }) => {
   const colourScheme = useColorScheme();

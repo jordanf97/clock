@@ -2,7 +2,7 @@ import * as React from "react";
 import { View } from "react-native";
 
 import { Layout, Button, Icon, useTheme, Text } from "@ui-kitten/components";
-import { SetupStackScreenProps } from "@/navigation/SetupNavigator";
+import { SetupStackScreenProps } from "@/navigation/setup-navigator";
 
 export const LandingScreen: React.FC<SetupStackScreenProps<"LandingScreen">> =
   ({ navigation }) => {

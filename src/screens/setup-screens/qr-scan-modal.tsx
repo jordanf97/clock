@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SetupStackScreenProps } from "@/navigation/SetupNavigator";
+import { SetupStackScreenProps } from "@/navigation/setup-navigator";
 import { Layout, Text } from "@ui-kitten/components";
 
 export const QrScanModal: React.FC<SetupStackScreenProps<"QrScanModal">> =

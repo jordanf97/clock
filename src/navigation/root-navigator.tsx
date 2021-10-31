@@ -11,11 +11,11 @@ import {
 import * as React from "react";
 
 import { NavigatorScreenParams } from "@react-navigation/native";
-import useColorScheme from "@/hooks/useColorScheme";
+import useColorScheme from "@/hooks/use-color-scheme";
 import { NotFoundScreen } from "@/screens";
 
-import { LinkingConfiguration } from "./LinkingConfiguration";
-import { SetupNavigator, SetupStackParamList } from "./SetupNavigator";
+import { LinkingConfiguration } from "./linking-configuration";
+import { SetupNavigator, SetupStackParamList } from "./setup-navigator";
 
 export type RootNavigatorParamList = {
   SetupNavigator: NavigatorScreenParams<SetupStackParamList> | undefined;

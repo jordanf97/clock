@@ -1,6 +1,6 @@
 import React from "react";
 
-import useCachedResources from "@/hooks/useCachedResources";
+import useCachedResources from "@/hooks/use-cached-resources";
 import { RootNavigator } from "@/navigation";
 import { ThemeProvider } from "@/theme";
 

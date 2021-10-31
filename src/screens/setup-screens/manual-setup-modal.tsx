@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { SetupStackScreenProps } from "@/navigation/SetupNavigator";
+import { SetupStackScreenProps } from "@/navigation/setup-navigator";
 import { Layout, Text } from "@ui-kitten/components";
 
 export const ManualSetupModal: React.FC<

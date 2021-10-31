@@ -1,2 +1,2 @@
-export { ThemeProvider } from "./ThemeProvider";
-export { themeElevations } from "./themeStyles";
+export { ThemeProvider } from "./theme-provider";
+export { themeElevations } from "./theme-styles";

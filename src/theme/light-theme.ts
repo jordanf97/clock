@@ -1,5 +1,5 @@
 import { light } from "@eva-design/eva";
-import commonColours from "./themeCommon";
+import commonColours from "./theme-common";
 
 /**
  * Brand colour overrides for light mode
