@@ -16,7 +16,6 @@ import { NotFoundScreen } from "@/screens";
 
 import { LinkingConfiguration } from "./linking-configuration";
 import { SetupNavigator, SetupStackParamList } from "./setup-navigator";
-import * as Linking from "expo-linking";
 
 export type RootNavigatorParamList = {
   SetupNavigator: NavigatorScreenParams<SetupStackParamList> | undefined;

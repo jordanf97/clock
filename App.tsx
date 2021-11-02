@@ -3,6 +3,7 @@ import React from "react";
 import useCachedResources from "@/hooks/use-cached-resources";
 import { RootNavigator } from "@/navigation";
 import { ThemeProvider } from "@/theme";
+import { RootStoreProvider } from "@/stores/use-store";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -12,7 +13,9 @@ export default function App() {
   } else {
     return (
       <ThemeProvider>
-        <RootNavigator />
+        <RootStoreProvider>
+          <RootNavigator />
+        </RootStoreProvider>
       </ThemeProvider>
     );
   }

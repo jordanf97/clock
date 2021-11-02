@@ -1,11 +1,14 @@
 import * as React from "react";
 import { SetupStackScreenProps } from "@/navigation/setup-navigator";
-import { Layout, Text } from "@ui-kitten/components";
-import * as Linking from "expo-linking";
+import { Button, Layout, Text } from "@ui-kitten/components";
+import { useStore } from "@/stores";
+import { observer } from "mobx-react-lite";
 
 export const QrScanModal: React.FC<SetupStackScreenProps<"QrScanModal">> =
-  () => {
-    Linking.getInitialURL().then(console.log);
+  observer((props) => {
+    const store = useStore("configuration");
+    const subdomain = store.subdomain;
+
     return (
       <Layout
         style={{
@@ -16,8 +19,16 @@ export const QrScanModal: React.FC<SetupStackScreenProps<"QrScanModal">> =
         }}
       >
         <Text style={{ fontSize: 50, textAlign: "center" }}>
-          Scan QR Code to configure
+          Scan QR Code to configure{subdomain}
         </Text>
+
+        <Button
+          onPress={() =>
+            store.initialiseConfiguration("test" + store.subdomain, "this")
+          }
+        >
+          Mutate State!
+        </Button>
       </Layout>
     );
-  };
+  });

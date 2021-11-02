@@ -2,10 +2,13 @@ import * as React from "react";
 
 import { SetupStackScreenProps } from "@/navigation/setup-navigator";
 import { Layout, Text } from "@ui-kitten/components";
+import { useStore } from "@/stores";
 
 export const ManualSetupModal: React.FC<
   SetupStackScreenProps<"ManualSetupModal">
 > = () => {
+  const configuration = useStore("configuration");
+
   return (
     <Layout
       style={{
@@ -16,7 +19,7 @@ export const ManualSetupModal: React.FC<
       }}
     >
       <Text style={{ fontSize: 50, textAlign: "center" }}>
-        Manually Configure
+        Manually Configure {configuration.subdomain}
       </Text>
     </Layout>
   );
