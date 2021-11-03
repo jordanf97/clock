@@ -4,4 +4,4 @@ export {
   CentredKeyboardAvoidingView,
   CentredLayout,
   CentredView,
-} from "./base-layouts";
+} from "./base-layouts/base-layouts";
