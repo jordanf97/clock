@@ -11,7 +11,9 @@ type Environment = {
 };
 
 const environments = {
-  dev: {},
+  dev: {
+    API_URL: "http://192.168.1.109:8080",
+  },
 
   prod: {},
 };
@@ -32,6 +34,14 @@ const env: Environment = {
   ...common,
   ...environments[currentEnvironment],
   env: currentEnvironment,
+};
+
+export const buildUriFromSubdomain = (subdomain: string) => {
+  if (subdomain === "local" && env.API_URL) {
+    return env.API_URL;
+  }
+
+  return `https://${subdomain}.foundu.com.au`;
 };
 
 export default env;

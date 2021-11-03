@@ -27,6 +27,7 @@
     "apisauce": "^2.1.2",
     "expo": "~43.0.0",
     "expo-asset": "~8.4.3",
+    "expo-barcode-scanner": "~11.1.2",
     "expo-constants": "~12.1.3",
     "expo-font": "~10.0.3",
     "expo-linking": "~2.4.2",
@@ -43,7 +44,8 @@
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.8.0",
     "react-native-svg": "12.1.1",
-    "react-native-web": "0.17.1"
+    "react-native-web": "0.17.1",
+    "styled-components": "^5.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -53,8 +55,11 @@
     "@types/react": "~17.0.21",
     "@types/react-native": "~0.64.12",
     "@types/react-test-renderer": "^17.0.1",
+    "@types/styled-components": "^5.1.15",
+    "@types/styled-components-react-native": "^5.1.2",
     "@ui-kitten/metro-config": "^5.1.1",
     "jest-expo": "~43.0.0",
+    "jest-styled-components": "^7.0.5",
     "typescript": "~4.3.5"
   },
   "private": true

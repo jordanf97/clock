@@ -2,6 +2,8 @@ import { StyleSheet } from "react-native";
 
 /**
  * Common non-screen or component specific styling should be placed here
+ *
+ * TODO: convert these shadows to CSS via styled components
  */
 export const themeElevations = StyleSheet.create({
   DP6: {

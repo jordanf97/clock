@@ -14,6 +14,13 @@ export const LinkingConfiguration: LinkingOptions<RootNavigatorParamList> = {
           ManualSetupModal: "setup/manual-configuration",
         },
       },
+
+      AuthenticationNavigator: {
+        screens: {
+          EmployeeSigninScreen: "/home",
+        },
+      },
+
       NotFound: "*",
     },
   },

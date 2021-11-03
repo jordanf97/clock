@@ -1,40 +1,49 @@
 import * as React from "react";
-import { View } from "react-native";
+import { Platform, View } from "react-native";
 
-import { Layout, Button, Icon, useTheme, Text } from "@ui-kitten/components";
+import { Button, Icon, useTheme, Text } from "@ui-kitten/components";
 import { SetupStackScreenProps } from "@/navigation/setup-navigator";
+import { CentredLayout } from "@/layouts";
+import { themeSpacing } from "@/theme/theme-spacings";
 
 export const LandingScreen: React.FC<SetupStackScreenProps<"LandingScreen">> =
   ({ navigation }) => {
     const theme = useTheme();
+
     return (
-      <Layout
-        style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
-      >
+      <CentredLayout>
         <View>
           <Icon
             name={"lock-clock"}
             style={{
-              height: 100,
+              height: themeSpacing(11, "height"),
               alignSelf: "center",
               tintColor: theme["brand-action-500"],
             }}
           />
 
-          <Text style={{ fontSize: 45, alignSelf: "center", marginBottom: 25 }}>
+          <Text
+            style={{
+              fontSize: themeSpacing(7, "height"),
+              alignSelf: "center",
+              marginBottom: themeSpacing(4, "height"),
+            }}
+          >
             Clock
           </Text>
 
-          <View style={{ paddingVertical: 15 }}>
-            <Button
-              size={"mega"}
-              onPress={() => navigation.navigate("QrScanModal")}
-            >
-              Scan QR Code
-            </Button>
-          </View>
+          {Platform.OS !== "web" && (
+            <View style={{ paddingVertical: themeSpacing(3, "height") }}>
+              <Button
+                size={"mega"}
+                onPress={() => navigation.navigate("QrScanModal")}
+              >
+                Scan QR Code
+              </Button>
+            </View>
+          )}
 
-          <View style={{ paddingVertical: 15 }}>
+          <View style={{ paddingVertical: themeSpacing(3, "height") }}>
             <Button
               size={"mega"}
               onPress={() => navigation.navigate("ManualSetupModal")}
@@ -43,6 +52,6 @@ export const LandingScreen: React.FC<SetupStackScreenProps<"LandingScreen">> =
             </Button>
           </View>
         </View>
-      </Layout>
+      </CentredLayout>
     );
   };

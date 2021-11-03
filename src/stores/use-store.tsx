@@ -1,5 +1,5 @@
 import React from "react";
-import { rootStore } from ".";
+import { rootStore } from "./root-store";
 import { RootInstance } from "./root-store";
 
 /**

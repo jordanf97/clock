@@ -1,4 +1,6 @@
+import { ConfigurationStore } from "@/stores/configuration-model";
 import { ApisauceInstance, create } from "apisauce";
+import { buildUriFromSubdomain } from "../../../env";
 import { ApiConfig, API_CONFIG } from "./api-config";
 import { getGeneralApiProblem } from "./api-problem";
 import * as Types from "./api.types";
@@ -33,11 +35,26 @@ class ApiService {
   }
 
   /**
+   * Hydrate the apiService from the intial app load
+   *
+   * @param configurationStore
+   */
+  hydrate(configurationStore: ConfigurationStore) {
+    if (configurationStore.subdomain) {
+      this.setup(configurationStore.subdomain);
+    }
+
+    if (configurationStore.longToken) {
+      this.setAuthentication(configurationStore.longToken);
+    }
+  }
+
+  /**
    * Create the underlying apisauce instance, this should be done early
    */
-  setup(url: string) {
+  setup(subdomain: string) {
     this.apisauce = create({
-      baseURL: url + this.API_PREFIX,
+      baseURL: buildUriFromSubdomain(subdomain) + "/" + this.API_PREFIX,
       timeout: this.config.timeout,
       headers: {
         Accept: "application/json",
@@ -51,7 +68,7 @@ class ApiService {
    *
    * @param longToken
    */
-  setAuthentication(longToken: string) {
+  private setAuthentication(longToken: string) {
     this.apisauce.setHeader("Authorization", longToken);
   }
 

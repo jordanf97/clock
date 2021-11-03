@@ -1,7 +1,7 @@
 import React from "react";
 
 import { ApplicationProvider, IconRegistry } from "@ui-kitten/components";
-import useColorScheme from "@/hooks/use-color-scheme";
+import { useColorScheme } from "@/hooks";
 import LightTheme from "./light-theme";
 import DarkTheme from "./dark-theme";
 import { StatusBar } from "expo-status-bar";

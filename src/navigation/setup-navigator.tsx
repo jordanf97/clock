@@ -10,6 +10,7 @@ import {
   NativeStackScreenProps,
 } from "@react-navigation/native-stack";
 import * as React from "react";
+
 import { RootNavigatorParamList } from "./root-navigator";
 
 export type SetupStackParamList = {

@@ -1,40 +1,31 @@
-import { RootNavigatorScreenProps } from "@/navigation/RootNavigator";
+import { RootNavigatorScreenProps } from "@/navigation/root-navigator";
 import * as React from "react";
-import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
+import { TouchableOpacity } from "react-native";
+import { Text } from "@ui-kitten/components";
+import { CentredLayout } from "@/layouts";
+import styled from "styled-components/native";
+import { themeSpacing } from "@/theme/theme-spacings";
 
 export const NotFoundScreen: React.FC<RootNavigatorScreenProps<"NotFound">> = ({
   navigation,
 }) => {
+  const TitleText = styled(Text)`
+    font-size: ${themeSpacing(4)}px;
+    font-weight: bold;
+  `;
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>This screen doesn't exist.</Text>
+    <CentredLayout style={{ padding: themeSpacing(4) }}>
+      <TitleText>This screen doesn't exist.</TitleText>
+
       <TouchableOpacity
         onPress={() => navigation.replace("SetupNavigator")}
-        style={styles.link}
+        style={{ marginTop: themeSpacing(3), paddingVertical: themeSpacing(3) }}
       >
-        <Text style={styles.linkText}>Go to home screen!</Text>
+        <Text category={"s1"} status={"primary"}>
+          Go to home screen!
+        </Text>
       </TouchableOpacity>
-    </View>
+    </CentredLayout>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    padding: 20,
-  },
-  title: {
-    fontSize: 20,
-    fontWeight: "bold",
-  },
-  link: {
-    marginTop: 15,
-    paddingVertical: 15,
-  },
-  linkText: {
-    fontSize: 14,
-    color: "#2e78b7",
-  },
-});
